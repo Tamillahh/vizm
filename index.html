@@ -1,0 +1,1387 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>VIZM - Strategic GTM for Civic & Political Tech | Clear Positioning, 2x Revenue</title>
+        <meta
+            name="description"
+            content="Strategic GTM consulting for early-stage civic and political tech. Clear positioning to double revenue. Former GTM leader: Google, Hustle, Prompt.io. $100M+ pipeline."
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            :root {
+                --primary: #5e6ad2;
+                --primary-dark: #4c5fd5;
+                --fuschia: #ec4899;
+                --fuschia-dark: #db2777;
+                --dark: #0f172a;
+                --dark-gray: #1e293b;
+                --gray: #475569;
+                --light-gray: #64748b;
+                --bg-light: #f8fafc;
+                --white: #ffffff;
+                --border: #e2e8f0;
+                --success: #10b981;
+                --warning: #f59e0b;
+                --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+                --shadow-md: 0 8px 16px rgba(0, 0, 0, 0.1);
+                --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.15);
+                --radius: 12px;
+                --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+                color: var(--gray);
+                line-height: 1.6;
+                -webkit-font-smoothing: antialiased;
+                background: var(--white);
+            }
+
+            h1, h2, h3, h4 {
+                color: var(--dark);
+                font-weight: 700;
+                line-height: 1.2;
+            }
+
+            /* Navigation */
+            nav {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background: rgba(255, 255, 255, 0.98);
+                backdrop-filter: blur(10px);
+                border-bottom: 1px solid var(--border);
+                z-index: 1000;
+                transition: var(--transition);
+            }
+
+            nav.scrolled {
+                box-shadow: var(--shadow-sm);
+            }
+
+            .nav-container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 1rem 2rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .logo {
+                font-size: 1.5rem;
+                font-weight: 800;
+                color: var(--dark);
+                text-decoration: none;
+                letter-spacing: -0.5px;
+            }
+
+            .nav-links {
+                display: flex;
+                gap: 2rem;
+                list-style: none;
+                align-items: center;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: var(--gray);
+                font-weight: 600;
+                font-size: 0.9rem;
+                transition: var(--transition);
+            }
+
+            .nav-links a:hover {
+                color: var(--fuschia);
+            }
+
+            .nav-cta {
+                background: var(--fuschia);
+                color: var(--white) !important;
+                padding: 0.5rem 1.25rem;
+                border-radius: 6px;
+                transition: var(--transition);
+            }
+
+            .nav-cta:hover {
+                background: var(--fuschia-dark);
+                transform: translateY(-1px);
+            }
+
+            /* Section System */
+            section {
+                padding: 60px 2rem;
+            }
+
+            .container {
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .section-header {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .section-label {
+                display: inline-block;
+                padding: 0.4rem 0.9rem;
+                background: var(--fuschia);
+                color: var(--white);
+                border-radius: 6px;
+                font-size: 0.75rem;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                margin-bottom: 1rem;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 0.75rem;
+                letter-spacing: -0.5px;
+            }
+
+            .section-subtitle {
+                font-size: 1.1rem;
+                color: var(--light-gray);
+                max-width: 650px;
+                margin: 0 auto;
+                line-height: 1.7;
+            }
+
+            /* Hero Section */
+            .hero {
+                min-height: 85vh;
+                display: flex;
+                align-items: center;
+                background: var(--white);
+                padding: 80px 2rem 40px;
+                position: relative;
+            }
+
+            .hero-container {
+                max-width: 1100px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+                align-items: center;
+            }
+
+            .hero-eyebrow {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                background: var(--fuschia);
+                color: var(--white);
+                border-radius: 50px;
+                font-size: 0.75rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 3.2rem;
+                font-weight: 800;
+                line-height: 1.1;
+                margin-bottom: 1rem;
+                letter-spacing: -1.5px;
+                color: var(--dark);
+            }
+
+            .hero .tagline {
+                font-size: 1.3rem;
+                color: var(--gray);
+                line-height: 1.7;
+                margin-bottom: 2rem;
+            }
+
+            .hero-cta-group {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .hero-image {
+                display: flex;
+                justify-content: center;
+                position: relative;
+            }
+
+            .hero-image img {
+                width: 100%;
+                max-width: 450px;
+                border-radius: var(--radius);
+                box-shadow: var(--shadow-lg);
+            }
+
+            /* Stats Banner */
+            .stats-banner {
+                background: linear-gradient(180deg, #5b4b8a 0%, #3d3460 100%);
+                padding: 40px 2rem;
+                text-align: center;
+            }
+
+            .stats-grid {
+                max-width: 1000px;
+                margin: 0 auto;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 3rem;
+            }
+
+            .stat-item {
+                color: var(--white);
+            }
+
+            .stat-number {
+                font-size: 3rem;
+                font-weight: 800;
+                line-height: 1;
+                margin-bottom: 0.5rem;
+                color: #f472b6;
+            }
+
+            .stat-label {
+                font-size: 1rem;
+                opacity: 0.9;
+            }
+
+            /* Credentials Section */
+            .credentials-section {
+                background: var(--bg-light);
+                padding: 60px 2rem;
+            }
+
+            .credentials-card {
+                background: var(--white);
+                border: 1px solid var(--border);
+                border-top: 3px solid var(--fuschia);
+                border-radius: var(--radius);
+                padding: 3rem;
+                text-align: center;
+                box-shadow: var(--shadow-sm);
+            }
+
+            .credentials-card p {
+                font-size: 1.25rem;
+                line-height: 1.8;
+                color: var(--gray);
+            }
+
+            .credentials-card .highlight {
+                color: var(--fuschia);
+                font-weight: 700;
+            }
+
+            /* Button System */
+            .btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.875rem 1.75rem;
+                border-radius: 8px;
+                font-weight: 600;
+                font-size: 0.95rem;
+                text-decoration: none;
+                transition: var(--transition);
+                border: none;
+                cursor: pointer;
+            }
+
+            .btn-primary {
+                background: var(--fuschia);
+                color: var(--white);
+            }
+
+            .btn-primary:hover {
+                background: var(--fuschia-dark);
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(236, 72, 153, 0.4);
+            }
+
+            .btn-secondary {
+                background: transparent;
+                color: var(--dark);
+                border: 2px solid var(--border);
+            }
+
+            .btn-secondary:hover {
+                border-color: var(--fuschia);
+                color: var(--fuschia);
+                transform: translateY(-2px);
+            }
+
+            /* Portfolio Section */
+            .portfolio-section {
+                background: var(--white);
+            }
+
+            .portfolio-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .portfolio-item {
+                background: var(--white);
+                border: 1px solid var(--border);
+                border-radius: var(--radius);
+                overflow: hidden;
+                transition: var(--transition);
+            }
+
+            .portfolio-item:hover {
+                transform: translateY(-8px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .portfolio-image {
+                width: 100%;
+                height: 250px;
+                object-fit: cover;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .portfolio-content {
+                padding: 1.5rem;
+            }
+
+            .portfolio-tag {
+                display: inline-block;
+                padding: 0.25rem 0.75rem;
+                background: var(--fuschia);
+                color: var(--white);
+                border-radius: 4px;
+                font-size: 0.75rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+                margin-bottom: 0.75rem;
+            }
+
+            .portfolio-item h4 {
+                font-size: 1.15rem;
+                font-weight: 700;
+                color: var(--dark);
+                margin-bottom: 0.5rem;
+            }
+
+            .portfolio-item p {
+                font-size: 0.9rem;
+                color: var(--light-gray);
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+
+            .portfolio-meta {
+                display: flex;
+                gap: 1.5rem;
+                font-size: 0.85rem;
+                color: var(--gray);
+                padding-top: 1rem;
+                border-top: 1px solid var(--border);
+                flex-wrap: wrap;
+            }
+
+            .portfolio-stat {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
+
+            .portfolio-stat strong {
+                color: var(--fuschia);
+                font-weight: 700;
+            }
+
+            /* Pricing Section */
+            .pricing-section {
+                background: var(--bg-light);
+            }
+
+            .pricing-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+            .pricing-card {
+                background: var(--white);
+                border: 1px solid var(--border);
+                border-top: 3px solid var(--fuschia);
+                border-radius: var(--radius);
+                padding: 2.5rem;
+                transition: var(--transition);
+                box-shadow: var(--shadow-sm);
+                position: relative;
+            }
+
+            .pricing-card.popular {
+                border-top-color: var(--success);
+                box-shadow: 0 8px 24px rgba(16, 185, 129, 0.15);
+                transform: scale(1.05);
+            }
+
+            .pricing-card:hover {
+                transform: translateY(-8px);
+                box-shadow: var(--shadow-lg);
+            }
+
+            .pricing-card.popular:hover {
+                transform: scale(1.05) translateY(-8px);
+            }
+
+            .popular-badge {
+                position: absolute;
+                top: -12px;
+                right: 20px;
+                background: var(--success);
+                color: var(--white);
+                padding: 0.35rem 0.75rem;
+                border-radius: 50px;
+                font-size: 0.7rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.5px;
+            }
+
+            .pricing-card h3 {
+                font-size: 1.35rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .price {
+                font-size: 2.75rem;
+                font-weight: 700;
+                color: var(--dark);
+                margin-bottom: 0.25rem;
+            }
+
+            .price span {
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: var(--gray);
+            }
+
+            .price-subtext {
+                font-size: 0.85rem;
+                color: var(--light-gray);
+                margin-bottom: 1.5rem;
+            }
+
+            .feature-list {
+                list-style: none;
+                margin-bottom: 2rem;
+            }
+
+            .feature-list li {
+                padding: 0.75rem 0 0.75rem 2rem;
+                position: relative;
+                font-size: 0.95rem;
+                line-height: 1.5;
+            }
+
+            .feature-list li::before {
+                content: "✓";
+                position: absolute;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background: var(--fuschia);
+                color: var(--white);
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.75rem;
+                font-weight: 700;
+            }
+
+            .pricing-cta {
+                margin-top: auto;
+                padding-top: 1.5rem;
+                border-top: 1px solid var(--border);
+            }
+
+            .pricing-cta .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            /* Changes Section */
+            .changes-section {
+                background: var(--white);
+            }
+
+            .changes-list {
+                list-style: none;
+                max-width: 900px;
+                margin: 0 auto;
+                display: grid;
+                gap: 1.25rem;
+            }
+
+            .changes-list li {
+                padding: 1.5rem 1.5rem 1.5rem 3.5rem;
+                position: relative;
+                background: var(--bg-light);
+                border-radius: var(--radius);
+                font-size: 1.05rem;
+                line-height: 1.6;
+                transition: var(--transition);
+            }
+
+            .changes-list li:hover {
+                transform: translateX(10px);
+                box-shadow: var(--shadow-sm);
+            }
+
+            .changes-list li::before {
+                content: "✓";
+                position: absolute;
+                left: 1rem;
+                top: 1.5rem;
+                width: 32px;
+                height: 32px;
+                background: var(--success);
+                color: var(--white);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+
+            /* Testimonials */
+            .testimonials-section {
+                background: var(--bg-light);
+            }
+
+            .testimonial-carousel {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+            .testimonial-slide {
+                display: none;
+                opacity: 0;
+            }
+
+            .testimonial-slide.active {
+                display: block;
+                opacity: 1;
+                animation: fadeIn 0.5s ease;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; }
+                to { opacity: 1; }
+            }
+
+            .testimonial-card {
+                background: var(--white);
+                border: 1px solid var(--border);
+                border-left: 3px solid var(--fuschia);
+                border-radius: var(--radius);
+                padding: 2.5rem;
+                box-shadow: var(--shadow-sm);
+            }
+
+            .testimonial-text {
+                font-size: 1.15rem;
+                line-height: 1.7;
+                font-style: italic;
+                color: var(--gray);
+                margin-bottom: 1.5rem;
+            }
+
+            .author-info h4 {
+                font-size: 1rem;
+                margin-bottom: 0.25rem;
+            }
+
+            .author-info p {
+                font-size: 0.9rem;
+                color: var(--light-gray);
+            }
+
+            .carousel-controls {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+
+            .carousel-btn {
+                width: 44px;
+                height: 44px;
+                border: 1px solid var(--border);
+                background: var(--white);
+                color: var(--gray);
+                border-radius: 50%;
+                font-size: 1.25rem;
+                cursor: pointer;
+                transition: var(--transition);
+            }
+
+            .carousel-btn:hover {
+                background: var(--fuschia);
+                color: var(--white);
+                border-color: var(--fuschia);
+            }
+
+            .carousel-dots {
+                display: flex;
+                justify-content: center;
+                gap: 0.5rem;
+                margin-top: 1.5rem;
+            }
+
+            .dot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: #cbd5e1;
+                cursor: pointer;
+                transition: var(--transition);
+            }
+
+            .dot.active {
+                background: var(--fuschia);
+                width: 28px;
+                border-radius: 5px;
+            }
+
+            /* Why Section */
+            .why-section {
+                background: var(--white);
+            }
+
+            .why-content {
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .why-paragraph {
+                font-size: 1.05rem;
+                line-height: 1.8;
+                margin-bottom: 1.5rem;
+                color: var(--gray);
+            }
+
+            .why-paragraph:first-child {
+                font-size: 1.15rem;
+                font-weight: 600;
+                color: var(--dark);
+            }
+
+            /* Not For Section */
+            .not-for-section {
+                background: var(--bg-light);
+            }
+
+            .not-for-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+            .not-for-card {
+                background: var(--white);
+                border: 1px solid var(--border);
+                border-left: 3px solid var(--warning);
+                border-radius: var(--radius);
+                padding: 1.5rem;
+                display: flex;
+                align-items: start;
+                gap: 1rem;
+            }
+
+            .not-for-icon {
+                flex-shrink: 0;
+                width: 32px;
+                height: 32px;
+                background: var(--warning);
+                color: var(--white);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.2rem;
+                font-weight: 700;
+            }
+
+            .not-for-card p {
+                font-size: 0.95rem;
+                line-height: 1.6;
+                margin: 0;
+            }
+
+            /* Final CTA */
+            .final-cta-section {
+                background: var(--bg-light);
+                padding: 60px 2rem;
+            }
+
+            .final-cta {
+                text-align: center;
+                padding: 4rem 2rem;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                border-radius: var(--radius);
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .final-cta h3 {
+                font-size: 2rem;
+                font-weight: 700;
+                color: var(--white);
+                margin-bottom: 1rem;
+            }
+
+            .final-cta p {
+                color: rgba(255, 255, 255, 0.9);
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+
+            .final-cta .btn-primary {
+                background: var(--white);
+                color: var(--dark);
+            }
+
+            .final-cta .btn-primary:hover {
+                background: var(--bg-light);
+                transform: translateY(-2px);
+            }
+
+            /* Footer */
+            footer {
+                background: var(--dark);
+                color: rgba(255, 255, 255, 0.7);
+                padding: 2.5rem 2rem;
+                text-align: center;
+                font-size: 0.9rem;
+            }
+
+            /* Lead Capture Modal */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 2000;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.7);
+                animation: fadeIn 0.3s ease;
+            }
+
+            .modal.active {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .modal-content {
+                background: var(--white);
+                padding: 3rem;
+                border-radius: var(--radius);
+                max-width: 500px;
+                width: 90%;
+                position: relative;
+                animation: slideUp 0.3s ease;
+            }
+
+            @keyframes slideUp {
+                from { transform: translateY(50px); opacity: 0; }
+                to { transform: translateY(0); opacity: 1; }
+            }
+
+            .modal-close {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                background: none;
+                border: none;
+                font-size: 1.5rem;
+                cursor: pointer;
+                color: var(--gray);
+                width: 32px;
+                height: 32px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: var(--transition);
+            }
+
+            .modal-close:hover {
+                background: var(--bg-light);
+                color: var(--dark);
+            }
+
+            .modal h3 {
+                font-size: 1.75rem;
+                margin-bottom: 0.5rem;
+            }
+
+            .modal p {
+                color: var(--light-gray);
+                margin-bottom: 2rem;
+            }
+
+            .form-group {
+                margin-bottom: 1.5rem;
+            }
+
+            .form-group label {
+                display: block;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+                color: var(--dark);
+                font-size: 0.9rem;
+            }
+
+            .form-group input,
+            .form-group select {
+                width: 100%;
+                padding: 0.75rem;
+                border: 1px solid var(--border);
+                border-radius: 6px;
+                font-size: 0.95rem;
+                font-family: inherit;
+                transition: var(--transition);
+            }
+
+            .form-group input:focus,
+            .form-group select:focus {
+                outline: none;
+                border-color: var(--fuschia);
+                box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+            }
+
+            /* Responsive */
+            @media (max-width: 768px) {
+                .hero-container {
+                    grid-template-columns: 1fr;
+                    gap: 2rem;
+                }
+
+                .hero h1 {
+                    font-size: 2.5rem;
+                }
+
+                .hero .tagline {
+                    font-size: 1.1rem;
+                }
+
+                .section-title {
+                    font-size: 2rem;
+                }
+
+                .stats-grid,
+                .pricing-grid,
+                .not-for-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .section-title {
+                    font-size: 2rem;
+                }
+
+                .pricing-card.popular {
+                    transform: none;
+                }
+
+                .nav-links {
+                    display: none;
+                }
+
+                .hero-cta-group {
+                    flex-direction: column;
+                }
+
+                .btn {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <nav id="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">VIZM</a>
+                <ul class="nav-links">
+                    <li><a href="#proposal">Sample Work</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact" class="nav-cta">Let's Talk</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <span class="hero-eyebrow">Strategic GTM & Positioning</span>
+                    <h1>Tell Your Story.<br>Stand Apart.<br>Hit Revenue Goals.</h1>
+                    <p class="tagline">
+                        GTM positioning for civic & political tech.<br>
+                        Strong product, weak story, founder-dependent growth.
+                    </p>
+                    <div class="hero-cta-group">
+                        <a href="#contact" class="btn btn-primary">
+                            <span>Book Strategy Call</span>
+                            <span>→</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="/headshot.jpeg" alt="Tamilla Mirzoyeva - VIZM Founder" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Banner -->
+        <section class="stats-banner" style="background: linear-gradient(135deg, #5b4b8a 0%, #3d3460 100%);">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" style="color: #f472b6; font-size: 3.5rem;">$100M+</div>
+                    <div class="stat-label" style="opacity: 0.95; font-size: 1.05rem;">Pipeline Generated</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" style="color: #f472b6; font-size: 3.5rem;">16x</div>
+                    <div class="stat-label" style="opacity: 0.95; font-size: 1.05rem;">Revenue Growth at Prompt.io</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" style="color: #f472b6; font-size: 3.5rem;">15+</div>
+                    <div class="stat-label" style="opacity: 0.95; font-size: 1.05rem;">Years Experience</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credentials Section -->
+        <section class="credentials-section">
+            <div class="container">
+                <div class="credentials-card" style="border-top: 4px solid var(--fuschia);">
+                    <p>
+                        Former GTM leader at <strong>Google, ManyChat, Hustle, Prompt.io.</strong> <span class="highlight">16x growth.</span> <span class="highlight">$100M+ pipeline.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Changes Section -->
+        <section class="changes-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Outcomes</span>
+                    <h2 class="section-title">Clear Positioning. Strategic Campaigns. 2x Revenue.</h2>
+                </div>
+
+                <div style="max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+                    <div style="display: flex; gap: 1rem; align-items: start;">
+                        <div style="flex-shrink: 0; width: 48px; height: 48px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem;">✓</div>
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem;">Specific ICP</h3>
+                            <p style="color: var(--gray); margin: 0; line-height: 1.6;">Not aspirational—you know exactly who you're for.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; align-items: start;">
+                        <div style="flex-shrink: 0; width: 48px; height: 48px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem;">✓</div>
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem;">Faster Sales Cycles</h3>
+                            <p style="color: var(--gray); margin: 0; line-height: 1.6;">Prospects get it immediately.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; align-items: start;">
+                        <div style="flex-shrink: 0; width: 48px; height: 48px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem;">✓</div>
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem;">Team Sells Without You</h3>
+                            <p style="color: var(--gray); margin: 0; line-height: 1.6;">No founder on every call.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; align-items: start;">
+                        <div style="flex-shrink: 0; width: 48px; height: 48px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem;">✓</div>
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem;">Scalable Growth</h3>
+                            <p style="color: var(--gray); margin: 0; line-height: 1.6;">Growth doesn't depend on founder relationships.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; align-items: start;">
+                        <div style="flex-shrink: 0; width: 48px; height: 48px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem;">✓</div>
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem;">Path to 2x</h3>
+                            <p style="color: var(--gray); margin: 0; line-height: 1.6;">You know why you're not 2x bigger—and how to get there.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; align-items: start;">
+                        <div style="flex-shrink: 0; width: 48px; height: 48px; background: var(--success); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 1.25rem;">✓</div>
+                        <div>
+                            <h3 style="font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.5rem;">Aligned Teams</h3>
+                            <p style="color: var(--gray); margin: 0; line-height: 1.6;">Sales and marketing speak the same language.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="pricing-section" id="pricing">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Investment</span>
+                    <h2 class="section-title">How We Work Together</h2>
+                    <p class="section-subtitle">
+                        Monthly retainers for hands-on competitive displacement execution
+                    </p>
+                </div>
+
+                <div style="max-width: 700px; margin: 0 auto;">
+                    <div style="background: white; border: 2px solid var(--fuschia); border-radius: var(--radius); padding: 3rem; box-shadow: var(--shadow-md);">
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <div style="font-size: 3rem; font-weight: 800; color: var(--dark); margin-bottom: 0.5rem;">
+                                $8K-20K<span style="font-size: 1.2rem; font-weight: 500; color: var(--gray);">/month</span>
+                            </div>
+                            <p style="color: var(--light-gray); font-size: 1.05rem;">
+                                3-month minimum commitment • Scope determines rate
+                            </p>
+                        </div>
+
+                        <div style="background: var(--bg-light); border-radius: 8px; padding: 2rem; margin-bottom: 2rem;">
+                            <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--dark); margin-bottom: 1rem;">What You Get:</h4>
+                            <ul style="list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem;">
+                                <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                    <span style="flex-shrink: 0; color: var(--fuschia); font-weight: 700;">✓</span>
+                                    <span style="color: var(--gray);">ICP clarification and positioning strategy</span>
+                                </li>
+                                <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                    <span style="flex-shrink: 0; color: var(--fuschia); font-weight: 700;">✓</span>
+                                    <span style="color: var(--gray);">GTM narrative and messaging framework</span>
+                                </li>
+                                <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                    <span style="flex-shrink: 0; color: var(--fuschia); font-weight: 700;">✓</span>
+                                    <span style="color: var(--gray);">Sales and marketing alignment strategy</span>
+                                </li>
+                                <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                    <span style="flex-shrink: 0; color: var(--fuschia); font-weight: 700;">✓</span>
+                                    <span style="color: var(--gray);">Strategic campaign roadmap and priorities</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div style="border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                            <h4 style="font-size: 1rem; font-weight: 700; color: var(--dark); margin-bottom: 0.75rem;">Scope determines fee:</h4>
+                            <p style="color: var(--gray); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                                • Complexity of positioning challenge
+                            </p>
+                            <p style="color: var(--gray); font-size: 0.95rem; line-height: 1.6; margin-bottom: 0.5rem;">
+                                • Number of stakeholders involved
+                            </p>
+                            <p style="color: var(--gray); font-size: 0.95rem; line-height: 1.6;">
+                                • Depth of organizational transformation needed
+                            </p>
+                        </div>
+
+                        <div style="margin-top: 2rem; text-align: center;">
+                            <a href="#contact" class="btn btn-primary" style="width: 100%; justify-content: center;">
+                                <span>Book Strategy Call</span>
+                                <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section" id="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">What People Say</h2>
+                    <p class="section-subtitle">
+                        Hear from leaders who've worked with Tamilla
+                    </p>
+                </div>
+
+                <div class="testimonial-carousel">
+                    <div class="testimonial-track">
+                        <div class="testimonial-slide active">
+                            <div class="testimonial-card">
+                                <p class="testimonial-text">
+                                    "Tamilla is a wonderful manager and colleague! She ran Hustle's events program where she and I effortlessly managed and produced over 70+ events. She not only was a great mentor to me but showed that she is a great leader in the company."
+                                </p>
+                                <div class="author-info">
+                                    <h4>Priscilla Guido</h4>
+                                    <p>Strategic Events, Salesforce</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <p class="testimonial-text">
+                                    "Tamilla's curiosity and drive to continuously learn make her a great asset for any team. You can always count on Tamilla to find the best solution and deliver it professionally and efficiently."
+                                </p>
+                                <div class="author-info">
+                                    <h4>Nan Edwards</h4>
+                                    <p>Head of Industry Engagement Marketing, J.P. Morgan Payments</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-slide">
+                            <div class="testimonial-card">
+                                <p class="testimonial-text">
+                                    "Tamilla was an outstanding employee with an energetic attitude that made her perfect for leading her small team. She conducted herself professionally and exceeded expectations."
+                                </p>
+                                <div class="author-info">
+                                    <h4>Curtis Rodgers</h4>
+                                    <p>Partner, Brick & Mortar Ventures</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-controls">
+                        <button class="carousel-btn" id="prevBtn">‹</button>
+                        <button class="carousel-btn" id="nextBtn">›</button>
+                    </div>
+
+                    <div class="carousel-dots">
+                        <span class="dot active" data-slide="0"></span>
+                        <span class="dot" data-slide="1"></span>
+                        <span class="dot" data-slide="2"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Section -->
+        <section class="why-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Experience</span>
+                    <h2 class="section-title">Why Work With Me</h2>
+                </div>
+
+                <div class="why-content">
+                    <p class="why-paragraph">
+                        $100M+ pipeline. 16x revenue growth at Prompt.io. Built programs at Google, ManyChat, and Hustle that generated measurable results.
+                    </p>
+
+                    <p class="why-paragraph">
+                        Advocacy platforms. Compliance tools. Voter data. Grassroots tech. Categories where trust and clarity matter more than volume.
+                    </p>
+
+                    <p class="why-paragraph">
+                        Not media buying. Not creative agencies. Not execution. Positioning problems that unlock step-change growth.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Not For Section -->
+        <section class="not-for-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-label">Fit</span>
+                    <h2 class="section-title">Not Right If...</h2>
+                </div>
+
+                <div class="not-for-grid">
+                    <div class="not-for-card">
+                        <div class="not-for-icon">✕</div>
+                        <p>Pre-revenue or under $1M ARR</p>
+                    </div>
+                    <div class="not-for-card">
+                        <div class="not-for-icon">✕</div>
+                        <p>Over $10M with entrenched processes</p>
+                    </div>
+                    <div class="not-for-card">
+                        <div class="not-for-icon">✕</div>
+                        <p>"We just need more leads"</p>
+                    </div>
+                    <div class="not-for-card">
+                        <div class="not-for-icon">✕</div>
+                        <p>Looking for execution, not strategy</p>
+                    </div>
+                    <div class="not-for-card">
+                        <div class="not-for-icon">✕</div>
+                        <p>Nothing broken, just want to scale</p>
+                    </div>
+                    <div class="not-for-card">
+                        <div class="not-for-icon">✕</div>
+                        <p>Comfortable with current growth rate</p>
+                    </div>
+                </div>
+
+                <div style="max-width: 700px; margin: 3rem auto 0; text-align: center;">
+                    <div style="background: var(--white); border: 2px solid var(--success); border-radius: var(--radius); padding: 2rem;">
+                        <h3 style="color: var(--dark); font-size: 1.35rem; margin-bottom: 1rem; font-weight: 700;">Perfect Fit:</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0; text-align: left; display: grid; gap: 0.75rem;">
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <span style="flex-shrink: 0; color: var(--success); font-weight: 700;">✓</span>
+                                <span style="color: var(--gray);">$1-5M ARR targeting $8-10M</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <span style="flex-shrink: 0; color: var(--success); font-weight: 700;">✓</span>
+                                <span style="color: var(--gray);">Deals take too long for unclear reasons</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <span style="flex-shrink: 0; color: var(--success); font-weight: 700;">✓</span>
+                                <span style="color: var(--gray);">Something's off but you can't name it</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <span style="flex-shrink: 0; color: var(--success); font-weight: 700;">✓</span>
+                                <span style="color: var(--gray);">Growth depends too much on founder</span>
+                            </li>
+                            <li style="display: flex; align-items: start; gap: 0.75rem;">
+                                <span style="flex-shrink: 0; color: var(--success); font-weight: 700;">✓</span>
+                                <span style="color: var(--gray);">Prospects ask "what exactly do you do?"</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta-section" id="contact">
+            <div class="final-cta" style="background: var(--fuschia); border: none;">
+                <h3>Why Aren't You 2x Bigger?</h3>
+                <p>30-minute diagnostic call.</p>
+                <a href="#calendly" class="btn" style="background: var(--dark); color: white;" onclick="scrollToCalendly(event)">
+                    <span>Book Call</span>
+                    <span>→</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Calendly Section -->
+        <section style="padding: 60px 2rem; background: var(--white);" id="calendly">
+            <div class="container" style="max-width: 1000px;">
+                <div class="section-header">
+                    <h2 class="section-title">Book Your Strategy Call</h2>
+                    <p class="section-subtitle">30 minutes to discuss your competitive landscape and displacement opportunities</p>
+                </div>
+                
+                <!-- Calendly inline widget -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/tamilla-vizm/30min?hide_gdpr_banner=1&primary_color=eb4899" style="min-width: 320px; height: 700px"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 VIZM. Competitive displacement for mission-driven tech companies.</p>
+        </footer>
+
+        <script>
+            // Navbar scroll effect
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                navbar.classList.toggle('scrolled', window.pageYOffset > 50);
+            });
+
+            // Testimonial Carousel
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.testimonial-slide');
+            const dots = document.querySelectorAll('.dot');
+
+            function showSlide(n) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+
+                if (n >= slides.length) currentSlide = 0;
+                if (n < 0) currentSlide = slides.length - 1;
+
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            document.getElementById('prevBtn').addEventListener('click', () => {
+                currentSlide--;
+                showSlide(currentSlide);
+            });
+
+            document.getElementById('nextBtn').addEventListener('click', () => {
+                currentSlide++;
+                showSlide(currentSlide);
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+
+            setInterval(() => {
+                currentSlide++;
+                showSlide(currentSlide);
+            }, 7000);
+
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    
+                    // Skip if it's just '#' or if it's meant to trigger a function
+                    if (href === '#' || this.hasAttribute('onclick')) {
+                        return;
+                    }
+                    
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Modal functions
+            function scrollToCalendly(e) {
+                e.preventDefault();
+                document.getElementById('calendly').scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // Calendly initialization
+    </body>
+</html>
